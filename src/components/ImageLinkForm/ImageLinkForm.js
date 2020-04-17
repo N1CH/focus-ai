@@ -1,17 +1,29 @@
-import React from 'react';
-import './ImageLinkForm.css';
+import React from "react";
+import "./ImageLinkForm.css";
 
 const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
-    return (
-        <div>
-            <p className='f3'>This Magic Brain will detect faces in your pictures. Give it a try!</p>
-            <div className='center'>
-                <div className='form center pa4 br3 shadow-5'>
-                    <input className='f4 pa2 w-70 center' type='text' onChange={onInputChange}></input>
-                    <button className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple' onClick={onButtonSubmit}>Detect</button>
-                </div>
-            </div>
-        </div>);
-}
+  return (
+    <div>
+      <p className='f3'>
+        SmartFace will detect the face in your pictures. Give it a try!
+      </p>
+      <div className='center'>
+        <div className='form center pa4 b--black-40 shadow-8'>
+          <input
+            className='f4 pa2 center w-75'
+            type='text'
+            onChange={onInputChange}
+          ></input>
+          <button
+            className='b ph4 pv3 input-reset ba b--black bg-transparent grow pointer f4 dib'
+            onClick={onButtonSubmit}
+          >
+            Detect
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default ImageLinkForm;
