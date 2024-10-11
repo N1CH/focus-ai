@@ -6,20 +6,8 @@ import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Rank from "./components/Rank/Rank";
-import Particles from "react-particles-js";
+import ParticlesBg from 'particles-bg'
 import "./App.css";
-
-const particlesOptions = {
-  particles: {
-    number: {
-      value: 120,
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-    },
-  },
-};
 
 const initialState = {
   input: "",
@@ -118,7 +106,7 @@ class App extends React.Component {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
       <div className='App'>
-        <Particles className='particles' params={particlesOptions} />
+        <ParticlesBg type="circle" bg={true} />
         <Navigation
           name={this.state.user.name}
           isSignedIn={isSignedIn}

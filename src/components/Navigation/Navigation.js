@@ -1,8 +1,8 @@
 import React from "react";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Button from "@material-ui/core/Button";
-import Avatar from "@material-ui/core/Avatar";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Button from "@mui/material/Button";
+import Avatar from "@mui/material/Avatar";
 
 const Navigation = ({ name, onRouteChange, isSignedIn }) => {
   if (isSignedIn) {
