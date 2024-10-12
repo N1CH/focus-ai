@@ -9,7 +9,6 @@ import Rank from "./components/Rank/Rank";
 import ParticlesBg from 'particles-bg'
 import "./App.css";
 
-
 const initialState = {
   input: "",
   imageUrl: "",
@@ -67,7 +66,7 @@ class App extends React.Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://smart-brain-api-414a.onrender.com/imageurl", {
+    fetch("https://tranquil-depths-84843.herokuapp.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -77,7 +76,7 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch("https://smart-brain-api-414a.onrender.com/image", {
+          fetch("https://tranquil-depths-84843.herokuapp.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
