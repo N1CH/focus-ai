@@ -5,7 +5,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
   return (
     <div>
       <p className='f3'>
-        SmartFace will detect the face in your pictures. Give it a try!
+        FocusAI will detect the face in your pictures. Give it a try!
       </p>
       <div className='center'>
         <div className='form center pa4 b--black-40 shadow-8'>

@@ -9,7 +9,7 @@ const es = {
   registerButton: "Crear cuenta",
   signInButton: "Ingresar",
   entryCount: ", tu cantidad actual de detecciones es...",
-  smartFace: "SmartFace detectará las caras de tus imagenes. ¡Pruébalo!",
+  smartFace: "FocusAI detectará las caras de tus imagenes. ¡Pruébalo!",
   detectButton: "Detectar",
 };
 

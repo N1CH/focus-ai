@@ -1,12 +1,12 @@
 import React from "react";
+import ParticlesBg from "particles-bg";
+import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Navigation from "./components/Navigation/Navigation";
 import SignIn from "./components/SignIn/SignIn";
 import Register from "./components/Register/Register";
 import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
-import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Rank from "./components/Rank/Rank";
-import ParticlesBg from 'particles-bg'
 import "./App.css";
 
 const initialState = {
@@ -43,8 +43,7 @@ class App extends React.Component {
   };
 
   calculateFaceLocation = (data) => {
-    const clarifaiFace =
-      data.outputs[0].data.regions[0].region_info.bounding_box;
+    const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById("inputimage");
     const width = Number(image.width);
     const height = Number(image.height);
@@ -66,7 +65,7 @@ class App extends React.Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("https://tranquil-depths-84843.herokuapp.com/imageurl", {
+    fetch("https://smart-brain-api-414a.onrender.com/imageurl", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -76,7 +75,7 @@ class App extends React.Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch("https://tranquil-depths-84843.herokuapp.com/image", {
+          fetch("https://smart-brain-api-414a.onrender.com/image", {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -105,42 +104,28 @@ class App extends React.Component {
   render() {
     const { isSignedIn, imageUrl, route, box } = this.state;
     return (
-      <div className='App'>
+      <div className="App">
         <ParticlesBg type="circle" bg={true} />
-        <Navigation
-          name={this.state.user.name}
-          isSignedIn={isSignedIn}
-          onRouteChange={this.onRouteChange}
-        />
-        {route === "home" ? (
-          <div>
-            <Logo />
-            <div>
-              <article class='center hidden shadow-5 br3 ba b--black-10 mv3 mw7 '>
-                {/* <h1 class='f4 bg-near-black white mv0 pv2 ph3'>SmartFace</h1> */}
-                <div class='pa3'>
-                  <Rank
-                    name={this.state.user.name}
-                    entries={this.state.user.entries}
-                  />
-                  <ImageLinkForm
-                    onInputChange={this.onInputChange}
-                    onButtonSubmit={this.onButtonSubmit}
-                  />
-                </div>
-              </article>
-
+        <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange} />
+        { route === "home"
+          ? <div>
+              <Logo />
+              <Rank
+                name={this.state.user.name}
+                entries={this.state.user.entries}
+              />
+              <ImageLinkForm
+                onInputChange={this.onInputChange}
+                onButtonSubmit={this.onButtonSubmit}
+              />
               <FaceRecognition box={box} imageUrl={imageUrl} />
             </div>
-          </div>
-        ) : route === "signin" ? (
-          <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange} />
-        ) : (
-          <Register
-            loadUser={this.loadUser}
-            onRouteChange={this.onRouteChange}
-          />
-        )}
+          : (
+             route === "signin"
+             ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+             : <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
+            )
+        }
       </div>
     );
   }
