@@ -21,20 +21,20 @@ class SignIn extends React.Component {
     event.preventDefault();
     fetch("https://smart-brain-api-414a.onrender.com/signin", {
       method: "post",
-      headers: { "Content-Type": "application/json" },
+      headers: {"Content-Type": "application/json"},
       body: JSON.stringify({
         email: this.state.signInEmail,
-        password: this.state.signInPassword,
-      }),
+        password: this.state.signInPassword
+      })
     })
-      .then((response) => response.json())
-      .then((user) => {
+      .then(response => response.json())
+      .then(user => {
         if (user.id) {
-          this.props.loadUser(user);
+          this.props.loadUser(user)
           this.props.onRouteChange("home");
         }
-      });
-  };
+      })
+  }
 
   render() {
     const { onRouteChange } = this.props;
