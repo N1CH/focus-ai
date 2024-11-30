@@ -1,16 +1,13 @@
-const es = {
-  registerTitle: "Registrarse",
-  registerNavbar: "REGISTRARSE",
-  signInNavbar: "INGRESAR",
-  signOutNavbar: "CERRAR SESIÓN",
-  registerName: "Nombre",
-  registerEmail: "Email",
-  registerPassword: "Contraseña",
+export default {
+  register: "Registro",
+  signIn: "Ingreso",
+  signOut: "Cerrar sesión",
+  name: "Nombre",
+  email: "Email",
+  password: "Contraseña",
   registerButton: "Crear cuenta",
-  signInButton: "Ingresar",
-  entryCount: ", tu cantidad actual de detecciones es...",
-  smartFace: "FocusAI detectará las caras de tus imagenes. ¡Pruébalo!",
-  detectButton: "Detectar",
+  signInButton: "Iniciar sesión",
+  entryCount: ", tu cantidad actual de escaneos es...",
+  description: "FocusAI detectará la cara dentro de tus imágenes. ¡Pruébalo!",
+  scanButton: "Escanear",
 };
-
-export default es;

@@ -1,12 +1,14 @@
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Rank = ({ name, entries }) => {
+  const { dictionary } = useLanguage();
   return (
-    <div>
-      <div className='white f3'>
-        {`${name}, your current entry count is...`}
+    <div style={{userSelect: 'none'}}>
+      <div className='black f3'>
+        {`${name}${dictionary.entryCount}`}
       </div>
-      <div className='white f1'>{entries}</div>
+      <div className='black f1'>{entries}</div>
     </div>
   );
 };

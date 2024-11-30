@@ -1,18 +1,17 @@
 import React from "react";
 import Tilt from 'react-parallax-tilt';
-import face from "./face.png";
-import "./Logo.css";
+import brain from "./brain.jpg";
 
 const Logo = () => {
   return (
-    <div className='ma4 mt0'>
+    <div className='ml6'>
       <Tilt
-        className='Tilt br2 shadow-2'
+        className='Tilt br3 ba b--black-10 shadow-5'
         options={{ max: 55 }}
-        style={{ height: 150, width: 150 }}
+        style={{ height: 200, width: 200 }}
       >
-        <div className='Tilt-inner pa3'>
-          <img style={{paddingTop: '5px'}} alt='logo' src={face}/>
+        <div className='Tilt-inner pa2'>
+          <img draggable='false' alt='logo' src={brain}/>
         </div>
       </Tilt>
     </div>

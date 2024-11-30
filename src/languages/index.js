@@ -3,7 +3,7 @@ import es from "./es";
 
 export const dictionaryList = {
   en,
-  es,
+  es
 };
 
 export const languageOptions = [
