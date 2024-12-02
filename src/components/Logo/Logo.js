@@ -4,7 +4,7 @@ import brain from "./brain.jpg";
 
 const Logo = () => {
   return (
-    <div className='ml6'>
+    <div className='mv4 ml6-l mv0-l flex-l items-start-l justify-start-l center'>
       <Tilt
         className='Tilt br3 ba b--black-10 shadow-5'
         options={{ max: 55 }}

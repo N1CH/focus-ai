@@ -10,4 +10,8 @@ export default {
   entryCount: ", tu cantidad actual de escaneos es...",
   description: "FocusAI detectará la cara dentro de tus imágenes. ¡Pruébalo!",
   scanButton: "Escanear",
+  registerError: "El email ya está registrado.",
+  loginError: "Email o contraseña incorrectos.",
+  serverError: "Error al conectar con el servidor, por favor inténtelo mas tarde.",
+  close: "Cerrar",
 };
