@@ -113,11 +113,18 @@ const App = () => {
         <Navigation isSignedIn={isSignedIn} onRouteChange={onRouteChange} />
         { route === "home"
           ? <div>
-              <Logo />
-              <Rank
-                name={state.user.name}
-                entries={state.user.entries}
-              />
+              <div className="flex items-center mb3 mh0-l mh3 center">
+                <div className="flex justify-center items-center mr4-l ml3 ml0-l">
+                  <Logo />
+                </div>
+                <div className="flex justify-center items-center mh3 mr5-l">
+                  <Rank
+                    name={state.user.name}
+                    entries={state.user.entries}
+                  />
+                </div>
+              </div>
+
               <ImageLinkForm
                 onInputChange={onInputChange}
                 onButtonSubmit={onButtonSubmit}

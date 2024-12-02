@@ -10,7 +10,7 @@ const Navigation = ({ onRouteChange, isSignedIn }) => {
     changeLanguage(newLanguage);
   };
   
-    if (isSignedIn) {
+    if (!isSignedIn) {
       return (
         <nav style={{display: 'flex', justifyContent: 'flex-end'}}>
           <p onClick={() => onRouteChange('signout')} className='b ph3 pv2 mr2-l mr1 bg-transparent grow pointer f4' style={{userSelect: 'none'}}>{dictionary.signOut}</p>

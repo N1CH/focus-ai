@@ -4,15 +4,18 @@ import brain from "./brain.jpg";
 
 const Logo = () => {
   return (
-    <div className='mv4 ml6-l mv0-l flex-l items-start-l justify-start-l center'>
+    <div className='ml6-l ml4 mv0-l mv3 center'>
       <Tilt
-        className='Tilt br3 ba b--black-10 shadow-5'
+        className='Tilt pa2 br3 ba b--black-10 shadow-5'
         options={{ max: 55 }}
-        style={{ height: 200, width: 200 }}
+        style={{ height: 150, width: 150 }}
       >
-        <div className='Tilt-inner pa2'>
-          <img draggable='false' alt='logo' src={brain}/>
-        </div>
+        <img 
+          draggable='false' 
+          alt='logo' 
+          src={brain}
+          className="w-100 h-100 object-cover"  
+        />
       </Tilt>
     </div>
   );

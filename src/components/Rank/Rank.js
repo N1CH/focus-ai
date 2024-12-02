@@ -5,10 +5,10 @@ const Rank = ({ name, entries }) => {
   const { dictionary } = useLanguage();
   return (
     <div style={{userSelect: 'none'}}>
-      <div className='black f3-l f4'>
+      <div className='black fw5 f3-l f5 mr3'>
         {`${name}${dictionary.entryCount}`}
       </div>
-      <div className='black f1-l f2'>{entries}</div>
+      <div className='black fw6 f1-l f2'>{entries}</div>
     </div>
   );
 };

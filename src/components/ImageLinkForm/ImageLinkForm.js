@@ -6,13 +6,13 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => {
   const { dictionary } = useLanguage();
   return (
     <div style={{userSelect: 'none'}}>
-      <p className='f3-l f4'>
+      <p className='f3-l f5 fw5 ph4'>
         {dictionary.description}
       </p>
-      <div className="br3 ba b--black-10 w-80 w-50-m w-50-l shadow-5 center">
-        <div className='form center pa4 b--black-40 shadow-8'>
+      <div className="br3 ba b--black-10 w-90 w-50-m w-50-l shadow-5 center">
+        <div className='form center pa4-l pa3 b--black-40 shadow-8'>
           <input
-            className='f4-l f5 pa2 center w-65 w-80-l'
+            className='f4-l f5 pa2 center w-80 w-100-l'
             type='text'
             onChange={onInputChange}
           ></input>
