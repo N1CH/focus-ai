@@ -1,0 +1,25 @@
+.title {
+    user-select: "none";
+    text-shadow: "0 0 10px rgba(255, 255, 255, 0.6)";
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 7rem;
+    margin-bottom: 0;
+    margin-top: 3rem;
+}
+
+.title h2 {
+    margin-bottom: 3em;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 48em) {
+    .title h1{
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+}

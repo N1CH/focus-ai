@@ -1,4 +1,5 @@
 export default {
+  subtitle: "Detect faces within images from the web!",
   register: "Register",
   signIn: "Sign In",
   signOut: "Sign out",

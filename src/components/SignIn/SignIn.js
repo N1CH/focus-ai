@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
-import { PacmanLoader } from "react-spinners";
+import { PulseLoader } from "react-spinners";
 
 const SignIn = ({ loadUser, onRouteChange }) => {
   const [email, setEmail] = useState("");
@@ -50,13 +50,13 @@ const SignIn = ({ loadUser, onRouteChange }) => {
       <main className="pa4 black-80">
         <form className="measure">
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-            <legend className="f1 fw6 ph0 mh0 center">{dictionary.signIn}</legend>
+            <legend className="f1-l f2 fw6 ph0 mh0 center">{dictionary.signIn}</legend>
             <div className="mt3">
               <label className="db fw6 lh-copy f6" htmlFor="email-address">
                 {dictionary.email}
               </label>
               <input
-                className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                className="pa2-l pa1 input-reset ba bg-transparent hover-bg-black hover-white w-100-l w-90"
                 type="email"
                 name="email-address"
                 id="email-address"
@@ -68,7 +68,7 @@ const SignIn = ({ loadUser, onRouteChange }) => {
                 {dictionary.password}
               </label>
               <input
-                className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+                className="b pa2-l pa1 input-reset ba bg-transparent hover-bg-black hover-white w-100-l w-90"
                 type="password"
                 name="password"
                 id="password"
@@ -81,13 +81,13 @@ const SignIn = ({ loadUser, onRouteChange }) => {
               <input
               onClick={onSubmitSignIn}
               disabled={isLoading}
-              className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+              className="b ph3-l ph2 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
               type="submit"
               value={dictionary.signInButton}
               />
             ) : (
-              <div style={{ marginLeft: "50px" }}>
-                <PacmanLoader color="black" size="17" />
+              <div className="pv2">
+                <PulseLoader color="black" size="10" />
               </div>
             )}
           </div>

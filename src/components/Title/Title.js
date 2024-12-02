@@ -1,10 +1,13 @@
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
+import "./Title.css";
 
 const Title = () => {
+  const { dictionary } = useLanguage();
   return (
-    <div>
-      <h1 className="fw9 black tracked tc f-headline-l f-headline-m tc mt0-l" style={{ fontSize: '4rem', userSelect: "none", textShadow: "0 0 10px rgba(255, 255, 255, 0.6)",
-    fontFamily: "'Orbitron', sans-serif", }}>FocusAI</h1>
+    <div className="title">
+      <h1 className="black tracked">FocusAI</h1>
+      <h2 className="black tracked f5-l f7">{dictionary.subtitle}</h2>
     </div>
   );
 };
